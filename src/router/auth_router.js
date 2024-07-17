@@ -20,6 +20,7 @@ appRouter.post("/auth/signUp", async (req, res) => {
                 })
         }
         const hashPassword = await bcryptjs.hash(password, 8);
+        
         let user = new User({
             name: name,
             email: email,
